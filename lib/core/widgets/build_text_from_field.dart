@@ -10,14 +10,12 @@ class CustomTextFormField extends StatelessWidget {
     this.validator,
     this.suffixIcon,
     this.obscureText = false,
-    required this.hintText,
     this.obscuringCharacter = '•',
     this.onChanged,
     this.focusNode, // إضافة FocusNode
   });
 
   final String label;
-  final String hintText;
   final TextEditingController? controller;
   final TextInputType? keyboardType;
   final String? Function(String?)? validator;
@@ -40,22 +38,29 @@ class CustomTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: const BorderSide(color: AppColors.kBordersideColor, width: 2),
+          borderSide: const BorderSide(
+            color: AppColors.kBordersideColor,
+            width: 2,
+          ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: const BorderSide(color: AppColors.kBordersideColor, width: 2),
+          borderSide: const BorderSide(
+            color: AppColors.kBordersideColor,
+            width: 2,
+          ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: const BorderSide(color: AppColors.kPrimaryColor, width: 2),
+          borderSide: const BorderSide(
+            color: AppColors.kPrimaryColor,
+            width: 2,
+          ),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: const BorderSide(color: Colors.red, width: 1),
         ),
-        hintText: hintText,
-        hintStyle: const TextStyle(color: AppColors.kGreyColor),
         labelText: label,
         labelStyle: const TextStyle(color: AppColors.kGreyColor),
         floatingLabelBehavior: FloatingLabelBehavior.auto,
