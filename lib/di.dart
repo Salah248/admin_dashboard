@@ -15,7 +15,7 @@ void setUpDi() {
     NetworkInfoImpl(InternetConnectionChecker.createInstance()),
   );
 
-  // userid   final String userId = Supabase.instance.client.auth.currentUser!.id;
+  // Supabase.instance
   di.registerSingleton<Supabase>(Supabase.instance);
 
   // Services

@@ -5,19 +5,21 @@ import 'package:flutter/material.dart';
 class CachedImage extends StatelessWidget {
   const CachedImage({
     super.key,
-    required this.imageUrl,
+    required this.imageUrl, this.height, this.width,
   });
 
-  final String imageUrl;
-
+final String imageUrl;
+final double? height;
+final double? width;
   @override
   Widget build(BuildContext context) {
     return CachedNetworkImage(
+      fit: BoxFit.cover,
       imageUrl: imageUrl,
-      placeholder: (context, url) => const SizedBox(
-        height: 150,
-        width: double.infinity,
-        child: Center(
+      placeholder: (context, url) =>  SizedBox(
+        height: height,
+        width: width,
+        child:const Center(
           child: CustomCircularIndicator(),
         ),
       ),

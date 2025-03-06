@@ -1,3 +1,4 @@
+import 'package:admin_dashboard/constants.dart';
 import 'package:admin_dashboard/core/helper/network/interceptors.dart';
 import 'package:dio/dio.dart';
 
@@ -6,10 +7,10 @@ class DioClient {
   DioClient()
       : _dio = Dio(
           BaseOptions(
-              baseUrl:'',
+              baseUrl:baseUrl,
               headers: {
                 'Content-Type': 'application/json; charset=UTF-8',
-                'apikey': ''
+                'apikey': apiKey
               },
               responseType: ResponseType.json,
               sendTimeout: const Duration(seconds: 10),
