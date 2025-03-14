@@ -1,7 +1,10 @@
+import 'package:admin_dashboard/di.dart';
+import 'package:admin_dashboard/presentaion/auth/Login/login_view.dart';
 import 'package:admin_dashboard/presentaion/home/home_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  setUpDi(); 
   runApp(const MyApp());
 }
 
@@ -15,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Our Market Admin',
       theme: ThemeData(useMaterial3: true),
-      home: const HomeView(),
+      home:  const LoginView(),
     );
   }
 }

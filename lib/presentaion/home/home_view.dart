@@ -4,7 +4,7 @@ import 'package:admin_dashboard/core/widgets/app_bar.dart';
 import 'package:admin_dashboard/core/widgets/custom_elevated_button.dart';
 import 'package:admin_dashboard/presentaion/home/pages/addAnAdmin/add_an_admin_view.dart';
 import 'package:admin_dashboard/presentaion/home/pages/addProduct/add_product._view.dart';
-import 'package:admin_dashboard/presentaion/home/pages/product/view/products_view.dart';
+import 'package:admin_dashboard/presentaion/home/pages/product/pages/products/products_view.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {

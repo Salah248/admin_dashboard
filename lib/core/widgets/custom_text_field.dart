@@ -1,15 +1,20 @@
 import 'package:admin_dashboard/core/resources/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
-    super.key, required this.label, this.controller,
+    super.key, required this.label, this.controller, this.onChanged, this.inputFormatters,
   });
 final String label;
 final TextEditingController? controller;
+final void Function(String)? onChanged;
+final List<TextInputFormatter>? inputFormatters;
   @override
   Widget build(BuildContext context) {
     return TextField(
+      inputFormatters: inputFormatters,
+      onChanged:onChanged ,
       controller:controller ,
       decoration: InputDecoration(
         border: OutlineInputBorder(

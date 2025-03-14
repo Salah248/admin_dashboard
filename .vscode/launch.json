@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+    
+    {
+      "name": "Flutter Web (Chrome - disable web security)",
+      "request": "launch",
+      "type": "dart",
+      "args": [
+        "-d", "chrome",
+        "--web-browser-flags=--disable-web-security"
+      ]
+    }
+  ]
+}

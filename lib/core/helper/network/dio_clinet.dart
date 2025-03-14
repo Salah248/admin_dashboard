@@ -4,13 +4,14 @@ import 'package:dio/dio.dart';
 
 class DioClient {
   late final Dio _dio;
-  DioClient()
+  final String baseUrl ;
+  DioClient({this.baseUrl =Constants.baseUrl})
       : _dio = Dio(
           BaseOptions(
               baseUrl:baseUrl,
               headers: {
                 'Content-Type': 'application/json; charset=UTF-8',
-                'apikey': apiKey
+                'apikey': Constants.apiKey,
               },
               responseType: ResponseType.json,
               sendTimeout: const Duration(seconds: 10),
