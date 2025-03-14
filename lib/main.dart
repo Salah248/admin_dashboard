@@ -1,6 +1,5 @@
 import 'package:admin_dashboard/di.dart';
 import 'package:admin_dashboard/presentaion/auth/Login/login_view.dart';
-import 'package:admin_dashboard/presentaion/home/home_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
